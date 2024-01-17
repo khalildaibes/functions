@@ -28,6 +28,7 @@ def sendnotification(event: firestore_fn.Event[Change[DocumentSnapshot]]):
     if event.data is None:
         return
         
+        
     try:
         original = event.data.get("uid")
     except KeyError:
